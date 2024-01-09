@@ -22,15 +22,15 @@ class MainActivity : ComponentActivity() {
                     val navController = rememberNavController()
                     NavHost(
                         navController = navController,
-                        startDestination = "home"
+                        startDestination = Screen.Home.route
                     ){
-                        composable("home"){
+                        composable(Screen.Home.route){
                             HomeScreen(navController)
                         }
-                        composable("second"){
+                        composable(Screen.Second.route){
                             SecondScreen(navController)
                         }
-                        composable("last"){
+                        composable(Screen.Last.route){
                             LastScreen(navController)
                         }
                     }

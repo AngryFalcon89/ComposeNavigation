@@ -30,7 +30,7 @@ fun HomeScreen(
         )
         Spacer(modifier = Modifier.height(16.dp))
         Button(onClick = {
-            navController.navigate("second")
+            navController.navigate(Screen.Second.route)
         }) {
             Text(
                 text = "GoTo Second"

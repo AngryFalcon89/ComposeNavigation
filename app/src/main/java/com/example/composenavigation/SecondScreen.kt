@@ -31,7 +31,7 @@ fun SecondScreen(
         )
         Spacer(modifier = Modifier.height(16.dp))
         Button(onClick = {
-            navController.navigate("last")
+            navController.navigate(Screen.Last.route)
         }) {
             Text(
                 text = "GoTo Last"
