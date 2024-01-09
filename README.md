@@ -10,13 +10,13 @@ Add the following dependency to your app's `build.gradle` file to include the Co
 // Navigation
 implementation("androidx.navigation:navigation-compose:2.7.6")
 ```
-##Step 2: Create a NavHostController
+## Step 2: Create a NavHostController
 In your Main.kt file, create a NavHostController using rememberNavController():
 
 ```kotlin
 val navController = rememberNavController()
 ```
-##Step 3: Define NavHost Graph
+## Step 3: Define NavHost Graph
 Create a NavHost graph within your Main.kt file. This graph is responsible for managing the navigation flow between different screens:
 
 ```kotlin
@@ -35,7 +35,7 @@ NavHost(
     }
 }
 ```
-##Step 4: Define Screens and Destinations
+## Step 4: Define Screens and Destinations
 Define each screen as a composable function (HomeScreen, SecondScreen, LastScreen) and specify their respective routes using a sealed class or enum (Screen in this example). You can use the Screen.kt file for this purpose:
 
 ```kotlin
@@ -45,10 +45,10 @@ sealed class Screen(val route: String) {
     object Last: Screen("last")
 }
 ```
-##Step 5: Usage - Navigation Actions
+## Step 5: Usage - Navigation Actions
 Within each screen, use the NavHostController to navigate to other destinations using navController.navigate(destinationRoute) and handle back navigation using navController.popBackStack().
 
-##Step 6: Explanation
+## Step 6: Explanation
 Jetpack Compose Navigation simplifies the navigation between composables in an Android app.
 
 NavHostController is a controller used to navigate through different destinations in the app.
